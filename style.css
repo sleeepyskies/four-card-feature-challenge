@@ -1,0 +1,154 @@
+:root {
+    /* Google fonts */
+    --ff-poppins: 'Poppins', sans-serif;
+    /* Primary colors */
+    --prmy-red: hsl(0,78%,62%);
+    --prmy-cyan: hsl(180, 62%, 55%);
+    --prmy-orange: hsl(34, 97%, 64%);
+    --prmy-blue: hsl(212, 86%, 64%);
+    /* Neutral colors */
+    --ntrl-dark-blue: hsl(234, 12%, 34%);
+    --ntrl-gray-blue: hsl(229, 6%, 66%);
+    --ntrl-light-gray: hsl(0, 0%, 98%);
+}
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--ntrl-light-gray);
+    font-family: var(--ff-poppins);
+}
+
+p {
+    color: var(--ntrl-gray-blue);
+}
+
+h1, h2 {
+    color: var(--ntrl-dark-blue);
+}
+
+/* Styling header */
+
+header {
+    max-width: 34rem;
+    text-align: center;
+    margin: 5.1rem auto;
+    font-size: 1.05em;
+}
+
+h1 {
+    font-size: 2.1em;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    line-height: 1.5125em;
+}
+
+h1 span {
+    font-weight: 600;
+}
+
+header p {
+    font-size: 0.9em;
+}
+
+/* Styling boxes */
+.cards {
+    display: flex;
+    margin: 0 auto;
+    max-width: 76.875rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.card {
+    background-color: white;
+    padding: 1.4rem 2rem;
+    max-width: 350px;
+    margin: 0.9rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+    border-radius: 0.4rem;
+}
+
+.icon img {
+    float: right;
+    margin: 2.4rem 0 0.5rem 0;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    margin-top: 0.3rem;
+}
+
+.card p {
+    font-size: 0.8em;
+    margin-top: 0.6rem;
+    line-height: 1.7em;
+}
+
+/* Box specific styling */
+
+.card:nth-child(1) {
+    border-top: 0.3rem solid var(--prmy-cyan);
+    position: relative;
+    transform: translateY(55%);   
+}
+
+.card:nth-child(2) {
+    border-top: 0.3rem solid var(--prmy-red);
+}
+
+.card:nth-child(3) {
+    border-top: 0.3rem solid var(--prmy-orange);
+    order: 4;
+}
+
+.card:nth-child(4) {
+    border-top: 0.3rem solid var(--prmy-blue);
+    position: relative;
+    transform: translateY(55%);
+}
+
+/* Styling for mid screen size */
+
+@media only screen and (max-width: 1136px) {
+
+    .card:nth-child(1) {
+        border-top: 0.3rem solid var(--prmy-cyan);
+        position: relative;
+        transform: translateY(0%);   
+    }
+
+    .card:nth-child(4) {
+        border-top: 0.3rem solid var(--prmy-blue);
+        position: relative;
+        transform: translateY(0%);
+    }
+}
+
+@media only screen and (max-width: 475px) {
+
+    header {
+        margin: 5.5rem auto 4rem auto;
+        padding: 0 2rem;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    main {
+        padding: 0 2rem 5rem 2rem;
+    }
+
+    .card {
+        margin: 0.9rem 0;
+        padding: 1.1rem 1.5rem 1rem 1.5rem;
+    }
+}
